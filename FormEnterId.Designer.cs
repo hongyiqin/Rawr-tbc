@@ -37,7 +37,7 @@ namespace Rawr
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(163, 51);
+            this.buttonOK.Location = new System.Drawing.Point(163, 70);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace Rawr
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(82, 51);
+            this.buttonCancel.Location = new System.Drawing.Point(82, 70);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace Rawr
             // 
             // textItemId
             // 
-            this.textItemId.Location = new System.Drawing.Point(12, 25);
+            this.textItemId.Location = new System.Drawing.Point(15, 44);
             this.textItemId.Name = "textItemId";
             this.textItemId.Size = new System.Drawing.Size(297, 20);
             this.textItemId.TabIndex = 3;
@@ -66,16 +66,17 @@ namespace Rawr
             this.lblTextAddItemID.AutoSize = true;
             this.lblTextAddItemID.Location = new System.Drawing.Point(12, 9);
             this.lblTextAddItemID.Name = "lblTextAddItemID";
-            this.lblTextAddItemID.Size = new System.Drawing.Size(207, 13);
+            this.lblTextAddItemID.Size = new System.Drawing.Size(302, 26);
             this.lblTextAddItemID.TabIndex = 4;
-            this.lblTextAddItemID.Text = "Enter Item ID or link (Wowhead, Thottbot):";
+            this.lblTextAddItemID.Text = "Automatic item loading is not working.\r\nPress Ok and you\'ll be prompted to manual" +
+    "ly create a new item";
             // 
             // FormEnterId
             // 
             this.AcceptButton = this.buttonOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 82);
+            this.ClientSize = new System.Drawing.Size(322, 105);
             this.ControlBox = false;
             this.Controls.Add(this.lblTextAddItemID);
             this.Controls.Add(this.textItemId);
