@@ -147,11 +147,6 @@ namespace Rawr
 					_character.AvailableItemsChanged += new EventHandler(_character_AvailableItemsChanged);
 					_loadingCharacter = true;
 
-					textBoxName.Text = Character.Name;
-					textBoxRealm.Text = Character.Realm;
-					comboBoxRegion.Text = Character.Region.ToString();
-					comboBoxRace.Text = Character.Race.ToString();
-
 					_loadingCharacter = false;
                     _character.IsLoading = false;
 					_character.OnItemsChanged();
@@ -671,19 +666,19 @@ namespace Rawr
 
         private void reloadCurrentCharacterFromArmoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-			Character.CharacterRegion region = (Character.CharacterRegion)Enum.Parse(typeof(Character.CharacterRegion), comboBoxRegion.SelectedItem.ToString());
-            if (String.IsNullOrEmpty(Character.Name) || String.IsNullOrEmpty(Character.Realm))
-            {
-                MessageBox.Show("A valid character has not been loaded, unable to reload.","No Character Loaded",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            else if (MessageBox.Show("Confirm reloading " + textBoxName.Text + " from the " + textBoxRealm.Text + "@" + region + " realm ", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                StartProcessing();
-                BackgroundWorker bw = new BackgroundWorker();
-                bw.DoWork += new DoWorkEventHandler(bw_ArmoryReloadCharacter);
-                bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_ArmoryGetCharacterReloadComplete);
-                bw.RunWorkerAsync(Character);
-            }
+			//Character.CharacterRegion region = (Character.CharacterRegion)Enum.Parse(typeof(Character.CharacterRegion), comboBoxRegion.SelectedItem.ToString());
+   //         if (String.IsNullOrEmpty(Character.Name) || String.IsNullOrEmpty(Character.Realm))
+   //         {
+   //             MessageBox.Show("A valid character has not been loaded, unable to reload.","No Character Loaded",MessageBoxButtons.OK,MessageBoxIcon.Error);
+   //         }
+   //         else if (MessageBox.Show("Confirm reloading " + textBoxName.Text + " from the " + textBoxRealm.Text + "@" + region + " realm ", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+   //         {
+   //             StartProcessing();
+   //             BackgroundWorker bw = new BackgroundWorker();
+   //             bw.DoWork += new DoWorkEventHandler(bw_ArmoryReloadCharacter);
+   //             bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_ArmoryGetCharacterReloadComplete);
+   //             bw.RunWorkerAsync(Character);
+   //         }
         }
 
         void bw_ArmoryReloadCharacter(object sender, DoWorkEventArgs e)
@@ -801,38 +796,38 @@ namespace Rawr
 
 		private void comboBoxRace_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (!_loadingCharacter)
-			{
-				Character.Race = (Character.CharacterRace)Enum.Parse(typeof(Character.CharacterRace), comboBoxRace.Text);
-				Character.OnItemsChanged();
-			}
+			//if (!_loadingCharacter)
+			//{
+			//	Character.Race = (Character.CharacterRace)Enum.Parse(typeof(Character.CharacterRace), comboBoxRace.Text);
+			//	Character.OnItemsChanged();
+			//}
 		}
 
 		private void comboBoxRegion_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (!_loadingCharacter)
-			{
-				Character.Region = (Character.CharacterRegion)Enum.Parse(typeof(Character.CharacterRegion), comboBoxRegion.Text);
-				Character.OnItemsChanged();
-			}
+			//if (!_loadingCharacter)
+			//{
+			//	Character.Region = (Character.CharacterRegion)Enum.Parse(typeof(Character.CharacterRegion), comboBoxRegion.Text);
+			//	Character.OnItemsChanged();
+			//}
 		}
 
 		private void textBoxName_TextChanged(object sender, EventArgs e)
 		{
-			if (!_loadingCharacter)
-			{
-				Character.Name = textBoxName.Text;
-				_unsavedChanges = true;
-			}
+			//if (!_loadingCharacter)
+			//{
+			//	Character.Name = textBoxName.Text;
+			//	_unsavedChanges = true;
+			//}
 		}
 
 		private void textBoxRealm_TextChanged(object sender, EventArgs e)
 		{
-			if (!_loadingCharacter)
-			{
-				Character.Realm = textBoxRealm.Text;
-				_unsavedChanges = true;
-			}
+			//if (!_loadingCharacter)
+			//{
+			//	Character.Realm = textBoxRealm.Text;
+			//	_unsavedChanges = true;
+			//}
 		}
 
 		private void copyCharacterStatsToClipboardToolStripMenuItem_Click(object sender, EventArgs e)

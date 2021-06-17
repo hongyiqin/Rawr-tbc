@@ -12,7 +12,7 @@ namespace Rawr
             {
                 String input = textItemId.Text;
 
-                Regex wowhead = new Regex(@"http://www.wowhead.com/?item=([-+]?\d+)");
+                Regex wowhead = new Regex(@"https://tbc.wowhead.com/?item=([-+]?\d+)/[a-z-]*");
                 Match m = wowhead.Match(input);
 
                 if (m.Success)

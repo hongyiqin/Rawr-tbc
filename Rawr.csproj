@@ -372,7 +372,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="RawrIcon.ico" />
-    <Content Include="ReadMe.txt" />
+    <None Include="ReadMe.txt.Original" />
     <Content Include="Resources\Diamond2.png" />
     <Content Include="Resources\Diamond3.png" />
     <Content Include="Resources\Diamond4.png" />
